@@ -1,0 +1,17 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Listar tipos de vehículos{% endblock %}
+{% block content %}
+    <h1 class="well">Listado de tipos de vehículos</h1>
+
+        {% if tipos_vehiculos %}
+            <ul>
+                {% for tipo in tipos_vehiculos %}
+                    <li><div class="icon-preview"><i class="mdi-action-done-all mdi-material-cyan-400" style="font-size: 25pt;"></i><span> {{  tipo }}</span></div></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h2>No hay vehículos</h2>
+        {% endif %}
+
+{% endblock %}
